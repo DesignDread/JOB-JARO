@@ -377,7 +377,7 @@ export default function BehavioralTestPage() {
             </div>
             <p className="text-lg">{selectedQuestion?.text}</p>
             <p className="text-lg">
-              Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem has been the industry's
+              Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem has been the industrys
               standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it
               to make a type specimen book.
             </p>

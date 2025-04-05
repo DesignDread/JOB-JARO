@@ -29,7 +29,7 @@ interface TestType {
 }
 
 export default function InterviewsPage() {
-  const [scrolled, setScrolled] = useState(false)
+//   const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -85,28 +85,28 @@ export default function InterviewsPage() {
     },
   ]
 
-  const testTypes: TestType[] = [
-    {
-      id: 1,
-      title: "Behavioral Test",
-      description:
-        "Evaluates personality, adaptability, leadership, teamwork, communication, and workplace decision-making skills.",
-      imageUrl: Google,
-    },
-    {
-      id: 2,
-      title: "General Aptitude Test",
-      description:
-        "Measures logical reasoning, problem-solving, numerical ability, critical thinking, and data interpretation.",
-      imageUrl: Google,
-    },
-    {
-      id: 3,
-      title: "Skill-Based Test",
-      description: "Assesses technical expertise, industry knowledge, practical skills, and role-specific proficiency.",
-      imageUrl: Google,
-    },
-  ]
+//   const testTypes: TestType[] = [
+//     {
+//       id: 1,
+//       title: "Behavioral Test",
+//       description:
+//         "Evaluates personality, adaptability, leadership, teamwork, communication, and workplace decision-making skills.",
+//       imageUrl: Google,
+//     },
+//     {
+//       id: 2,
+//       title: "General Aptitude Test",
+//       description:
+//         "Measures logical reasoning, problem-solving, numerical ability, critical thinking, and data interpretation.",
+//       imageUrl: Google,
+//     },
+//     {
+//       id: 3,
+//       title: "Skill-Based Test",
+//       description: "Assesses technical expertise, industry knowledge, practical skills, and role-specific proficiency.",
+//       imageUrl: Google,
+//     },
+//   ]
 
   return (
     <div className="min-h-screen bg-gray-50 pb-12 p-4">

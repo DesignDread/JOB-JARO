@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { ArrowRight } from "lucide-react"
+// import { ArrowRight } from "lucide-react"
 
 interface ScoreCategory {
   name: string
@@ -18,7 +18,7 @@ interface IdealAnswer {
 }
 
 export default function InterviewResultsPage() {
-  const [scrolled, setScrolled] = useState(false)
+//   const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {

@@ -70,7 +70,9 @@ export default function VirtualInterviewPage() {
       })
     }
   }
-
+  if(false){
+    setCurrentQuestion(2)
+  }
   const completeInterview = () => {
     router.push("/view-interview/results")
   }
@@ -98,7 +100,7 @@ export default function VirtualInterviewPage() {
         <h2 className="text-xl lg:text-[32px]  mb-6">Question {currentQuestion}</h2>
         <p className="text-lg lg:text-[32px] font-medium">{question}</p>
       </div>
-
+          
       {/* Controls */}
       <div className="w-full max-w-7xl mb-8">
         <div className="flex justify-between items-center mb-8">

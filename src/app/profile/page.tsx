@@ -1,347 +1,356 @@
-import Image from "next/image"
-import { MapPin, ExternalLink, Edit, Plus } from "lucide-react"
+"use client"
+import React from 'react';
+import { MapPin, ExternalLink, Edit2, ChevronDown, Plus, Eye } from 'lucide-react';
+import Image from 'next/image';
+import Girl from "../../../public/girls.svg"
+import Edit from "../../../public/Edit.svg"
+import Flower from "../../../public/Flower.svg"
+import FilledBag from "../../../public/FilledBag.svg"
+import OutlineBag from "../../../public/outlineBag.svg"
+import Calander from "../../../public/Calander.svg"
+import {Input} from "@/components/ui/input"
 
-export default function UserProfile() {
+const ProfilePage = () => {
   return (
-    <div className="bg-white min-h-screen pb-10">
-      {/* Header */}
-      <div className="p-4 flex items-start gap-3 border-b">
-        <div className="relative">
-          <div className="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center overflow-hidden">
-            <Image
-              src="/placeholder.svg?height=48&width=48"
-              alt="Jane Foster"
-              width={48}
-              height={48}
-              className="object-cover"
-            />
+    <div className="bg-slate-100 p-4 min-h-screen font-sans">
+      {/* Header with profile info */}
+      <div className="flex justify-between items-center mb-4">
+        <div className="flex items-center gap-3">
+          <div className="relative">
+            <div className="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center overflow-hidden">
+              <Image src={Girl} alt="Profile" className="rounded-full" />
+            </div>
+          </div>
+          <div>
+            <h1 className="font-medium text-lg">Jane Foster</h1>
+            <p className="text-gray-600 text-sm">UI/UX Designer</p>
           </div>
         </div>
-        <div className="flex-1">
-          <div className="flex justify-between items-start">
-            <div>
-              <h1 className="font-semibold text-lg">Jane Foster</h1>
-              <p className="text-sm text-gray-500">UX/UI Designer</p>
-              <div className="flex items-center text-xs text-gray-500 mt-1">
-                <MapPin size={12} className="mr-1" />
-                <span>Chicago, IL, USA</span>
-                <span className="mx-1">•</span>
-                <span>9:30</span>
-              </div>
-            </div>
-            <div className="flex gap-2">
-              <button className="text-purple-600 border border-purple-600 rounded-md px-3 py-1 text-sm flex items-center">
-                <Plus size={16} className="mr-1" />
-                Add Video Resume
-              </button>
-              <button className="bg-purple-600 text-white rounded-md px-3 py-1 text-sm flex items-center">
-                <Edit size={16} className="mr-1" />
-                View Resume
-              </button>
-            </div>
-          </div>
+        <div className="flex gap-2">
+          <button className="border border-[#4E0684] rounded px-3 py-1 text-[#4E0684] text-sm flex items-center gap-1">
+            <Plus size={14} />
+            <span>Add Video Resume</span>
+          </button>
+          <button className="bg-purple-700 rounded px-3 py-1 text-white text-sm flex items-center gap-1">
+            <Eye size={14} />
+            <span>View Resume</span>
+          </button>
         </div>
       </div>
 
-      <div className="flex flex-col ">
-        <div className="flex">
-
-
-        <div className="w-full md:w-2/3 p-4">
-          {/* About Me */}
-          <div className="mb-6">
-            <h2 className="font-semibold mb-2">About me</h2>
-            <p className="text-sm text-gray-700">
-              UX Product Designer and Founder
-              <br />
-              <br />I am a UX/UI designer with 5+ years of experience using creative and technical business. I am a
-              results-first product designer who can create elegant experiences that solve complex challenges for
-              businesses and their customers. I have a passion for creating beautiful, functional, and user-centered
-              digital products that help people and make a difference.
-            </p>
-          </div>
-          </div>
-
-
-<div className="bg-gradient-to-r from-purple-600 to-purple-800 text-white p-4 rounded-lg mb-6">
-            <div className="text-6xl font-bold">10%</div>
-            <div className="text-sm mb-2">off your first contract</div>
-            <p className="text-xs mb-4">
-              Complete your profile to apply for your first contract and receive 10% off. This offer is valid for new
-              users only and applies to your first contract on our platform.
-            </p>
-            <div className="flex items-center text-xs">
-              <div className="w-2 h-2 rounded-full bg-white mr-1"></div>
-              <span>Offer expires in 7 days</span>
-            </div>
-          </div>
-          </div>
-<div>
-          {/* Skills */}
-          <div className="mb-6">
-            <div className="flex justify-between items-center mb-2">
-              <h2 className="font-semibold">Skills</h2>
-              <button className="text-gray-400">
-                <Edit size={16} />
-              </button>
-            </div>
-            <div className="flex flex-wrap gap-2">
-              <SkillTag label="Product Design" />
-              <SkillTag label="User Experience" />
-              <SkillTag label="User Research" />
-              <SkillTag label="Prototyping" />
-              <SkillTag label="Figma" />
-              <SkillTag label="Wireframing" />
-              <SkillTag label="Web" />
-              <SkillTag label="Product Design" />
-              <SkillTag label="User Experience" />
-              <SkillTag label="User Research" />
-              <SkillTag label="Prototyping" />
-              <SkillTag label="Information Architecture" />
-              <SkillTag label="Product Design" />
-              <SkillTag label="User Experience" />
-              <SkillTag label="Card Sorting" />
-              <SkillTag label="Jobs" />
-            </div>
-          </div>
-
-          {/* Currently working with */}
-          <div className="mb-6">
-            <div className="flex justify-between items-center mb-2">
-              <h2 className="font-semibold">Currently working with...</h2>
-              <button className="text-gray-400">
-                <Edit size={16} />
-              </button>
-            </div>
-            <div className="flex items-center gap-2 bg-green-100 rounded-md p-2 w-fit">
-              <div className="w-6 h-6 rounded-md bg-white flex items-center justify-center">
-                <Image src="/placeholder.svg?height=20&width=20" alt="Figma" width={20} height={20} />
-              </div>
-              <span className="text-sm">Figma</span>
-            </div>
-          </div>
-
-          {/* Certificates */}
-          <div className="mb-6">
-            <div className="flex justify-between items-center mb-2">
-              <h2 className="font-semibold">Certificates</h2>
-              <button className="text-gray-400">
-                <Edit size={16} />
-              </button>
-            </div>
-            <div className="space-y-2">
-              <div className="flex items-center gap-2">
-                <div className="w-6 h-6 rounded-full bg-orange-100 flex items-center justify-center text-orange-500 text-xs">
-                  G
-                </div>
-                <span className="text-sm">Google UX Designer</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <div className="w-6 h-6 rounded-full bg-orange-100 flex items-center justify-center text-orange-500 text-xs">
-                  G
-                </div>
-                <span className="text-sm">Google UI Designer</span>
-              </div>
-            </div>
-          </div>
-
-          {/* Portfolio */}
-          <div className="mb-6">
-            <div className="flex justify-between items-center mb-2">
-              <h2 className="font-semibold">Portfolio</h2>
-              <button className="text-gray-400">
-                <Edit size={16} />
-              </button>
-            </div>
-            <div className="space-y-2">
-              <div className="flex items-center gap-2">
-                <div className="w-6 h-6 rounded-md bg-purple-600 flex items-center justify-center text-white text-xs">
-                  W
-                </div>
-                <span className="text-sm">Website 1</span>
-                <ExternalLink size={14} className="text-gray-400" />
-              </div>
-              <div className="flex items-center gap-2">
-                <div className="w-6 h-6 rounded-md bg-purple-600 flex items-center justify-center text-white text-xs">
-                  W
-                </div>
-                <span className="text-sm">Website 2</span>
-                <ExternalLink size={14} className="text-gray-400" />
-              </div>
-            </div>
-          </div>
-
-          {/* Work History */}
-          <div className="mb-6">
-            <div className="flex justify-between items-center mb-2">
-              <h2 className="font-semibold">Work History</h2>
-              <button className="text-gray-400">
-                <Edit size={16} />
-              </button>
-            </div>
-            <div className="space-y-4">
-              <WorkHistoryItem
-                company="Co-Founder, Partner - Head of Design"
-                duration="2019 - Present • 5 yrs"
-                status="Full-time"
-                statusColor="green"
-              />
-              <WorkHistoryItem
-                company="Co-Founder, Partner - Head of Design"
-                duration="2019 - Present • 5 yrs"
-                status="Full-time"
-                statusColor="green"
-              />
-            </div>
-          </div>
-
-          {/* Education */}
-          <div className="mb-6">
-            <div className="flex justify-between items-center mb-2">
-              <h2 className="font-semibold">Education</h2>
-              <button className="text-gray-400">
-                <Edit size={16} />
-              </button>
-            </div>
-            <div className="space-y-4">
-              <EducationItem
-                degree="Master's degree in Information Technology"
-                school="MIT"
-                duration="2015 - 2017 • 2 yrs"
-              />
-              <EducationItem
-                degree="Co-Founder, Partner - Head of Design"
-                school="University"
-                duration="2010 - 2015 • 5 yrs"
-              />
-            </div>
-          </div>
+      {/* Profile Info and Progress */}
+      <div className="flex gap-4 mb-4">
+        {/* About me section */}
+        <div className="bg-[#F1DFFF] max-w-[650px] p-8 rounded-lg flex-1">
+          <h2 className="font-medium pb-4 lg:text-[26px]">About me</h2>
+          <h3 className="font-medium text-sm pb-2 lg:text-[22px]">UX Design Specialist and Teacher</h3>
+          <p className="text-xs lg:text-[18px] mt-1">
+            Brings 10+ years of comprehensive UX/UI design expertise to the table. Specializes in devising intuitive user interfaces that reduce product abandonment trends through the growth lifecycle by business stakeholders... Designs and technical debt represent soaring costs for countless businesses +
+            <span className="text-[#4E0684]"> Read more</span>
+          </p>
         </div>
 
-        <div className="w-full md:w-1/3 p-4">
-          {/* Promo Banner */}
+        {/* Profile completion */}
+        <div className="bg-white p-8 rounded-lg relative flex flex-col gap-6 flex-1">
+        <div className="w-full rounded-full overflow-hidden  h-[35px] bg-gray-300 relative">
+                <div className="h-full  bg-[#4E0684]" style={{ width: '25%' }}></div>
+            </div>
+            <div className='flex gap-4' >
           
+           
+          <div className="flex flex-col justify-center">
+            <div className="relative">
+                <span className="text-3xl lg:text-[115px] font-medium">10%</span>
+              
+              <p className="text-xs text-center lg:text-[20px] mt-1">of your profile is complete</p>
+            </div>
+          </div>
+          <div className="flex-1">
+            <h2 className="font-medium lg:text-[24px]">Complete your profile to apply for jobs!</h2>
+            <p className="text-xs mt-1 lg:text-[14px]">
+              To learn more about building a great profile, check out our
+              <span className="text-[#4E0684]"> guide to success</span>. Cover all your job fit factors to make
+              sure employers can find you. The more complete your profile is, the 
+              more likely you'll get hired.
+            </p>
+          </div>
+          </div>
+        </div>
+      </div>
 
-          {/* Add Remaining Details */}
-          <div className="border rounded-lg p-4">
-            <h2 className="font-semibold mb-4">
-              Add Remaining Details To Your Profile{" "}
-              <span className="text-xs text-gray-500">(helps find Profile Matches)</span>
-            </h2>
+      {/* Skills Section */}
+      <div className="bg-white p-8 rounded-lg mb-4 relative">
+        <div className="flex justify-between">
+          <h2 className="font-medium lg:text-[24px]">Skills</h2>
+          {/*  <Image src={Edit} alt=''></Image>
+ */}
+          <Image src={Edit} alt=''></Image>
+        </div>
+        <div className="flex flex-wrap gap-2 mt-3">
+          {['Product Design', 'User Experience', 'User Research', 'Wireframing', 'Web'].map((skill) => (
+            <span key={skill} className="bg-[#D2F4E6] lg:text-[16px] text-teal-700 text-xs px-3 py-1 rounded-full">
+              {skill}
+            </span>
+          ))}
+        </div>
+        <div className="flex flex-wrap gap-2 mt-3">
+          {Array(15).fill(null).map((_, i) => (
+            <span key={i} className="bg-[#EBF2FA] text-gray-700 text-xs px-3 py-1 lg:text-[16px] rounded-full truncate w-fit">
+              {['Product Design', 'User Experience', 'User Research', 'Wireframing', 'Web'][i % 5]}
+            </span>
+          ))}
+        </div>
+      </div>
 
-            <div className="space-y-4">
-              <div>
-                <label className="block text-sm mb-1">Availability</label>
-                <input type="text" className="w-full border rounded-md p-2 text-sm" placeholder="" />
+      {/* Working with Section */}
+      {/* <div className="bg-white p-4 rounded-lg mb-4 relative">
+        <div className="flex justify-between">
+          <h2 className="font-medium">Currently working with...</h2>
+           <Image src={Edit} alt=''></Image>
+
+        </div>
+        <div className="flex gap-2 mt-3">
+          <div className="border rounded-lg p-3 flex items-center justify-between w-40">
+            <div className="flex items-center gap-2">
+              <div className="w-6 h-6 bg-red-50 rounded-full flex items-center justify-center">
+                <span className="text-red-500 text-xs">*</span>
               </div>
+              <span className="text-sm">Zapier</span>
+            </div>
+            <div className="text-green-500">
+              <ChevronDown size={16} />
+            </div>
+          </div>
+        </div>
+      </div> */}
 
-              <div>
-                <label className="block text-sm mb-1">Preferred Work Team</label>
-                <input type="text" className="w-full border rounded-md p-2 text-sm" placeholder="" />
+      <div className="flex gap-4 mb-4">
+        
+        {/* Left column */}
+        <div className="flex-1 flex flex-col gap-4">
+        <div className="bg-white shadow-md p-8 lg:text-[24px] rounded-lg relative">
+            <div className="flex justify-between">
+              <h2 className="font-medium pt-2">Currently working with...</h2>
+              <Image src={Edit} className='' alt=''></Image>
               </div>
+            <div className="flex flex-col gap-3 mt-3">
+             
+                <div  className="border bg-[#DDF2AF] rounded-lg p-3 flex items-center justify-between">
+                  <div className="flex items-center gap-2">
+                    <Image src={Flower} alt=''></Image>
+                    <span className="text-sm text-[#7C984E] font-medium lg:text-[16px]">Zapier </span>
+                  </div>
+                  <ExternalLink size={16} className="text-gray-600" />
+                </div>
+            
+            </div>
+          </div>
+          {/* Certificates Section */}
+          <div className="bg-white shadow-md p-8 lg:text-[24px] rounded-lg relative">
+            <div className="flex justify-between">
+              <h2 className="font-medium">Certificates</h2>
+               <Image src={Edit} alt=''></Image>
 
+            </div>
+            <div className="flex flex-col gap-3 mt-3">
+              {Array(2).fill(null).map((_, i) => (
+                <div key={i} className="flex gap-2 bg-[#FFFCEB] p-3 items-center">
+                    <Image src={Flower} alt=''></Image>
+                    <span className="text-sm lg:text-[24px]">Google UX Designer</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Portfolio Section */}
+          <div className="bg-white p-4 rounded-lg relative">
+            <div className="flex justify-between">
+              <h2 className="font-medium">Portfolio</h2>
+               <Image src={Edit} alt=''></Image>
+
+            </div>
+            <div className="flex flex-col gap-3 mt-3">
+              {Array(2).fill(null).map((_, i) => (
+                <div key={i} className="border rounded-lg bg-[#EBF2FA] p-3 flex items-center justify-between">
+                  <div className="flex items-center gap-2">
+                    <div className='bg-white p-2 rounded-full'>
+                    <Image src={FilledBag} alt=""></Image>
+                    </div>
+                    <span className="text-sm lg:text-[24px]">Website {i + 1}</span>
+                  </div>
+                  <ExternalLink size={16} className="text-gray-600" />
+                </div>
+              ))}
+            </div>
+          </div>
+          
+        </div>
+
+
+
+
+
+        {/* Right column */}
+        <div className="flex-[2] flex flex-col gap-4">
+          {/* Work History Section */}
+          <div className="bg-white p-8 rounded-lg relative">
+            <div className="flex justify-between">
+              <h2 className="font-medium lg:text-[24px]">Work History</h2>
+               <Image src={Edit} alt=''></Image>
+
+            </div>
+            <div className="flex flex-col gap-4 mt-3">
+              {Array(3).fill(null).map((_, i) => (
+                <div key={i} className="flex gap-3">
+                  <div className=" bg-[#FAF7FE] p-2 w-[55px] h-[55px] rounded flex items-center justify-center flex-shrink-0">
+                    <Image src={OutlineBag} alt=''></Image>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="font-medium text-sm lg:text-[26px] ">Co-Founder, Partner, Head of Design</h3>
+                    <div className="flex items-center text-xs lg:text-[16px]  mt-1">
+                      <span className='font-bold'>Simply Design</span>
+                      <span className="mx-2">•</span>
+                      <span><Image src={Calander} alt='' className='inline'></Image> Oct 2019 - Present</span>
+                    </div>
+                <div className="w-full border-t border-gray-300 my-4"></div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Education Section */}
+          <div className="bg-white p-4 rounded-lg relative">
+            <div className="flex justify-between">
+              <h2 className="font-medium lg:text-[24px]">Education</h2>
+               <Image src={Edit} alt=''></Image>
+
+            </div>
+            <div className="flex flex-col gap-4 mt-3">
+            <div  className="flex gap-3">
+                  <div className=" bg-[#FAF7FE] p-2 w-[55px] h-[55px] rounded flex items-center justify-center flex-shrink-0">
+                    <Image src={OutlineBag} alt=''></Image>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="font-medium text-sm lg:text-[26px] ">Master’s degree in Information Technology</h3>
+                    <div className="flex items-center text-xs lg:text-[16px]  mt-1">
+                      <span className='font-bold'>UILS</span>
+                      <span className="mx-2">•</span>
+                      <span><Image src={Calander} alt='' className='inline'></Image> Oct 2019 - Present</span>
+                    </div>
+                <div className="w-full border-t border-gray-300 my-4"></div>
+                  </div>
+                </div>
+            
+              <div  className="flex gap-3">
+                  <div className=" bg-[#FAF7FE] p-2 w-[55px] h-[55px] rounded flex items-center justify-center flex-shrink-0">
+                    <Image src={OutlineBag} alt=''></Image>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="font-medium text-sm lg:text-[26px] ">Co-Founder, Partner, Head of Design</h3>
+                    <div className="flex items-center text-xs lg:text-[16px]  mt-1">
+                      <span className='font-bold'>Simply Design</span>
+                      <span className="mx-2">•</span>
+                      <span><Image src={Calander} alt='' className='inline'></Image> Oct 2019 - Present</span>
+                    </div>
+                <div className="w-full border-t border-gray-300 my-4"></div>
+                  </div>
+                </div>
+            </div>
+          </div>
+
+          {/* Profile Details Form */}
+          <div className=" p-4 rounded-lg">
+            <h2 className="font-medium lg:text-[32px] mb-2">Add Remaining Details To Your Profile <span className="text-xs lg:text-[20px]">(Helps You Boost Profile Strength!)</span></h2>
+            
+            {/* Form fields */}
+            <div className="flex flex-col gap-4">
               <div>
-                <label className="block text-sm mb-1">Preferred Work Mode</label>
-                <input type="text" className="w-full border rounded-md p-2 text-sm" placeholder="" />
+                <label className="text-sm block mb-1 lg:text-[20px] ">Availability</label>
+                <select className="w-full border rounded-md p-2 text-gray-400">
+                  <option>Not Specified</option>
+                </select>
               </div>
-
+              
               <div>
-                <label className="block text-sm mb-1">Preferred Location</label>
+                <label className="text-sm block mb-1 lg:text-[20px]">Preferred Work Type</label>
+                <select className="w-full border rounded-md p-2 text-gray-400">
+                  <option>Not Specified</option>
+                </select>
+              </div>
+              
+              <div>
+                <label className="text-sm block mb-1 lg:text-[20px]">Preferred Work Mode</label>
+                <select className="w-full border rounded-md p-2 text-gray-400">
+                  <option>Not Specified</option>
+                </select>
+              </div>
+              
+              <div>
+                <label className="text-sm block mb-1 lg:text-[20px]">Preferred Locations</label>
                 <div className="relative">
-                  <input type="text" className="w-full border rounded-md p-2 pl-8 text-sm" placeholder="" />
-                  <MapPin size={16} className="absolute left-2 top-1/2 transform -translate-y-1/2 text-gray-400" />
+                  <Input 
+                    type="text" 
+                    placeholder="+ Location" 
+                    className="w-full border rounded-md p-2 pl-8" 
+                  />
+                  <MapPin size={16} className="absolute left-2 top-3 text-gray-400" />
+                </div>
+                <button className="bg-[#4285F4] rounded-full lg:text-[20px] text-white text-xs  py-1 px-3 mt-2">
+                  + New Location
+                </button>
+              </div>
+              
+              <div>
+                <label className="text-sm block mb-1 lg:text-[20px]">Right To Work</label>
+                <p className="text-xs mb-1 lg:text-[20px]">Specify Your Residence Or Visa</p>
+                <div className="relative">
+                  <Input 
+                    type="text" 
+                    placeholder="+ Location" 
+                    className="w-full border rounded-md p-2 pl-8" 
+                  />
+                  <MapPin size={16} className="absolute left-2 top-3 text-gray-400" />
+                </div>
+                <div className="flex justify-between items-center mt-2">
+                  <button className="bg-[#4285F4] rounded-full lg:text-[20px] text-white text-xs  py-1 px-3">
+                    + New Location
+                  </button>
+                  <Edit2 size={16} className="text-gray-400" />
                 </div>
               </div>
-
+              
               <div>
-                <label className="block text-sm mb-1">Right To Work</label>
-                <div className="text-xs text-gray-500 mb-1">Specify Your Preference To Work</div>
-                <div className="relative">
-                  <input type="text" className="w-full border rounded-md p-2 pl-8 text-sm" placeholder="" />
-                  <MapPin size={16} className="absolute left-2 top-1/2 transform -translate-y-1/2 text-gray-400" />
-                </div>
+                <label className="text-sm block mb-1 lg:text-[20px]">Salary Expectations</label>
+                <select className="w-full border rounded-md p-2 text-gray-400">
+                  <option>Not Specified</option>
+                </select>
               </div>
-
+              
               <div>
-                <button className="bg-purple-600 text-white rounded-md px-4 py-2 text-sm w-full">+ Add Details</button>
+                <label className="text-sm block mb-1 lg:text-[20px]">Classification of Interest</label>
+                <Input 
+                  type="text" 
+                  placeholder="Add" 
+                  className="w-full border rounded-md p-2" 
+                />
+                <button className="bg-[#4285F4] rounded-full lg:text-[20px] text-white text-xs py-1 px-3 mt-2">
+                  + Primary Interest
+                </button>
               </div>
-
+              
               <div>
-                <label className="block text-sm mb-1">Salary Expectations</label>
-                <input type="text" className="w-full border rounded-md p-2 text-sm" placeholder="$50,000/year" />
-              </div>
-
-              <div>
-                <label className="block text-sm mb-1">Classification of Interest</label>
-                <input type="text" className="w-full border rounded-md p-2 text-sm" placeholder="" />
-              </div>
-
-              <div>
-                <button className="bg-purple-600 text-white rounded-md px-4 py-2 text-sm w-full">Save & Close</button>
-              </div>
-
-              <div>
-                <label className="block text-sm mb-1">Append to PDF</label>
-                <input type="text" className="w-full border rounded-md p-2 text-sm" placeholder="" />
+                <label className="text-sm block mb-1 lg:text-[20px]">Approachability</label>
+                <select className="w-full border rounded-md p-2 text-gray-400">
+                  <option>Online</option>
+                </select>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-function SkillTag({ label }: { label: string }) {
-  return <div className="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">{label}</div>
-}
-
-interface WorkHistoryItemProps {
-  company: string;
-  duration: string;
-  status: string;
-  statusColor: string;
-}
-
-function WorkHistoryItem({ company, duration, status, statusColor }: WorkHistoryItemProps) {
-  return (
-    <div className="flex items-start gap-3">
-      <div className="w-6 h-6 rounded-md bg-purple-100 flex items-center justify-center text-purple-600 text-xs mt-1">
-        <Image src="/placeholder.svg?height=20&width=20" alt="Company" width={20} height={20} />
-      </div>
-      <div>
-        <div className="font-medium text-sm">{company}</div>
-        <div className="flex items-center text-xs text-gray-500">
-          <span>{duration}</span>
-          <span className="mx-1">•</span>
-          <span className={`text-${statusColor}-500`}>{status}</span>
-        </div>
-      </div>
-    </div>
-  )
-}
-
-interface EducationItemProps {
-  degree: string;
-  school: string;
-  duration: string;
-}
-
-function EducationItem({ degree, school, duration }: EducationItemProps) {
-  return (
-    <div className="flex items-start gap-3">
-      <div className="w-6 h-6 rounded-md bg-purple-100 flex items-center justify-center text-purple-600 text-xs mt-1">
-        <Image src="/placeholder.svg?height=20&width=20" alt="School" width={20} height={20} />
-      </div>
-      <div>
-        <div className="font-medium text-sm">{degree}</div>
-        <div className="flex items-center text-xs text-gray-500">
-          <span>{school}</span>
-          <span className="mx-1">•</span>
-          <span>{duration}</span>
-        </div>
-      </div>
-    </div>
-  )
-}
-
+export default ProfilePage;
