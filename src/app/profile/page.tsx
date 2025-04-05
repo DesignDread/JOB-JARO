@@ -264,7 +264,7 @@ const ProfilePage = () => {
 
           {/* Profile Details Form */}
           <div className=" p-4 rounded-lg">
-            <h2 className="font-medium lg:text-[32px] mb-2">Add Remaining Details To Your Profile <span className="text-xs lg:text-[20px]">(Helps You Boost Profile Strength!)</span></h2>
+            <h2 className="font-medium lg:text-[28px] mb-2">Add Remaining Details To Your Profile <span className="text-xs lg:text-[18px]">(Helps You Boost Profile Strength!)</span></h2>
             
             {/* Form fields */}
             <div className="flex flex-col gap-4">
@@ -299,7 +299,7 @@ const ProfilePage = () => {
                   />
                   <MapPin size={20} fill='#4E0684' className="absolute left-3 top-2 text-white" />
                 </div>
-                <button className="bg-[#4285F4] rounded-full lg:text-[20px] text-white text-xs  py-1 px-3 mt-2">
+                <button className="bg-[#4285F4] rounded-full lg:text-[20px] text-white text-xs  py-1 px-3 my-4">
                   + New Location
                 </button>
               </div>
@@ -315,7 +315,7 @@ const ProfilePage = () => {
                   />
                   <MapPin size={20} fill='#4E0684' className="absolute left-3 top-2 text-white" />
                   </div>
-                <div className="flex justify-between items-center mt-2">
+                <div className="flex justify-between items-center my-4">
                   <button className="bg-[#4285F4] rounded-full lg:text-[20px] text-white text-xs  py-1 px-3">
                     + New Location
                   </button>
@@ -337,7 +337,7 @@ const ProfilePage = () => {
                   placeholder="Add" 
                   className="w-full border rounded-md p-2" 
                 />
-                <button className="bg-[#4285F4] rounded-full lg:text-[20px] text-white text-xs py-1 px-3 mt-2">
+                <button className="bg-[#4285F4] rounded-full lg:text-[20px] text-white text-xs py-1 px-3 my-4">
                   + Primary Interest
                 </button>
               </div>
