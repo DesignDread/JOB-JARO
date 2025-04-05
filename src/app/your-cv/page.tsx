@@ -74,9 +74,9 @@ function page() {
           ))}
         </div>
       </div>
-      <div className="flex gap-3 mt-10">
+      <div className="flex gap-3 h-screen mt-10">
         {/* form  */}
-        <div className="w-1/3 flex flex-col">
+        <div className="w-1/3 h-full flex overflow-y-scroll flex-col">
           {/* file name and language choice  */}
           <div>
             <h1 className="text-center text-[38px] font-[700]">Untitled</h1>
@@ -87,7 +87,7 @@ function page() {
           </div>
           {/* score  */}
           <div className="border-b-2 flex gap-2 border-[#52B47A] p-2">
-            <h1 className="text-center w-fit  text-[16px] font-[700] text-white bg-[#52B47A]">
+            <h1 className="text-center w-fit  text-[16px] font-[700] px-2 text-white bg-[#52B47A]">
               100
             </h1>
             <p>Your resume score</p>
@@ -187,17 +187,32 @@ function page() {
                 key={index}
                 className="border-b-2 pb-3 border-[#1A1A1A1A] flex justify-between"
               >
-                <p className="text-[22px] font-[500]">{item}</p>
+                <p className="text-[22px] pl-3 font-[500]">{item}</p>
                 <button className="bg-[#571BAD] text-white flex justify-center items-center h-[35px] w-[35px] rounded-full">
                   <ChevronDown className="text-[15px]" />
                 </button>
               </div>
             ))}
           </div>
+          <div>
+            <h1 className="text-[22px] font-[700] text-left">Add Section</h1>
+            <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-4">
+              {moreSections.map((item, index) => (
+                <div key={index} className="flex gap-2 p-2 rounded-[10px]">
+                  <Image
+                    src={item.img}
+                    alt="section"
+                    className="w-[33px] h-[33px] object-contain"
+                  />
+                  <p className="text-[15px]">{item.section}</p>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
         {/* Download  */}
-        <div className="P-2 w-3/5 flex bg-white p-2 flex-col gap-4">
-          <div className="flex gap-4">
+        <div className="P-2 w-3/5 h-fit flex bg-white p-2 flex-col gap-4">
+          <div className="flex mx-auto w-fit gap-6">
             <div className="bg-[#571BAD] text-white flex justify-center items-center h-[35px] w-[35px] p-2 rounded-full">
               <Image
                 src={at}
@@ -225,23 +240,8 @@ function page() {
           <Image
             src={resume}
             alt="resumt"
-            className="w-full h-full object-contain"
+            className="w-full h-[500px] object-contain"
           />
-        </div>
-      </div>
-      <div>
-        <h1 className="text-[22px] font-[700] text-left">Add Section</h1>
-        <div className="w-[40%] grid grid-cols-1 md:grid-cols-2 gap-4">
-          {moreSections.map((item, index) => (
-            <div key={index} className="flex gap-2 p-2 rounded-[10px]">
-              <Image
-                src={item.img}
-                alt="section"
-                className="w-[33px] h-[33px] object-contain"
-              />
-              <p className="text-[15px]">{item.section}</p>
-            </div>
-          ))}
         </div>
       </div>
     </div>
