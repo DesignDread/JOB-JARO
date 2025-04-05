@@ -134,7 +134,7 @@ const WorkshopCard = ({
         <Image
           src={img}
           alt="workshop-image"
-          className="w-full h-[200px] object-cover rounded-[10px]"
+          className="w-full h-[200px] mt-2 object-cover rounded-[10px]"
         />
         <div className="">
           <h1 className="text-[20px] font-[700] text-left mt-2">{heading}</h1>
@@ -147,16 +147,16 @@ const WorkshopCard = ({
             <h1 className="text-[15px] my-auto">{speaker}</h1>
           </div>
 
-          <div className="flex gap-3 mt-4">
+          <div className="flex gap-4 w-fit mx-auto my-4">
             <Link
               href={register}
-              className="bg-white border-2 rounded-full px-6 py-2 border-[#571BAD] text-[#571BAD]"
+              className="bg-white border-2 rounded-full px-4 py-2 border-[#571BAD] text-[#571BAD]"
             >
               Register
             </Link>
             <Link
               href={join}
-              className="bg-[#EBF2FA] flex justify-center items-center px-6 py-2 rounded-full text-[#571BAD]"
+              className="bg-[#EBF2FA] flex justify-center items-center px-4 py-2 rounded-full text-[#571BAD]"
             >
               Join now
             </Link>
