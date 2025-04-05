@@ -13,7 +13,7 @@ export default function TestSelectionPage() {
           description="Evaluates personality, adaptability, leadership, teamwork, communication, and workplace decision-making skills."
           imageSrc={Vh1}
           buttonText="Take Test"
-          buttonLink="/view-interview/behavioral"
+          buttonLink="/virtual-interview/behavioral"
         />
 
         <TestCard

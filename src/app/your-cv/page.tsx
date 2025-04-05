@@ -14,7 +14,7 @@ import s4 from "../../../public/section4.svg";
 import s5 from "../../../public/section5.svg";
 import s6 from "../../../public/section6.svg";
 import s7 from "../../../public/section7.svg";
-function page() {
+function Page() {
   const pattern = ["Choose Template", "Enter Your Details", "Download Resume"];
   const [formData, setFormData] = useState({
     title: "",
@@ -57,7 +57,7 @@ function page() {
     },
   ];
 
-  const handleChange = (e: any) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
   return (
@@ -248,4 +248,4 @@ function page() {
   );
 }
 
-export default page;
+export default Page;

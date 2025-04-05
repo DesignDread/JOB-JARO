@@ -24,22 +24,19 @@ interface Interview {
   practiceOption: string
 }
 
-interface TestType {
-  id: number
-  title: string
-  description: string
-  imageUrl: string
-}
+
 
 export default function InterviewsPage() {
-  const [scrolled, setScrolled] = useState(false)
+  const [, setScrolled] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 300) {
         setScrolled(true)
+      }else{
       }
     }
+    
 
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
@@ -118,7 +115,7 @@ export default function InterviewsPage() {
         </div>
 
         <div className="space-y-6">
-          {interviews.map((interview, index) => (
+          {interviews.map((interview) => (
             <div key={interview.id}>
               <Card className="overflow-hidden">
                 <CardContent className="p-0">

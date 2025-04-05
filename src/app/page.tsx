@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Google from "../../public/Google.svg"
-import { Clock, ChevronLeft, ChevronRight, ChevronDown } from "lucide-react"
+import {  ChevronLeft, ChevronRight, ChevronDown } from "lucide-react"
 import Home1 from "../../public/home1.svg"
 import Graph1 from "../../public/Graph1.svg"
 import Graph2 from "../../public/Graph2.svg"
@@ -145,10 +145,10 @@ export default function Dashboard() {
             </div>
             
             {/* Third box (Upcoming Workshops) - normal width (3/12) */}
-            <div className="bg-white border border-[#B3B3B3]  p-4 rounded-lg col-span-3">
+            <div className="bg-white border relative border-[#B3B3B3]  p-4 rounded-lg col-span-3">
               <div className="flex justify-between items-center mb-4">
                 <h3 className="font-medium">Upcoming Workshops</h3>
-                <div className="flex">
+                <div className="flex absolute top-1/2 w-80 justify-between">
                   <button className="w-6 h-6 flex items-center justify-center rounded-full bg-gray-100">
                     <ChevronLeft size={16} />
                   </button>
@@ -164,9 +164,9 @@ export default function Dashboard() {
                 
                   src=  {Home1}
                       alt="Workshop"
-                      width={300}
+                      width={280}
                       height={150}
-                      className="rounded-lg w-full h-auto"
+                      className="rounded-lg w-[95%] mx-auto h-auto"
                     />
                   </div>
                   <div className="flex items-center justify-between mb-2">
@@ -330,9 +330,9 @@ export default function Dashboard() {
 
 function StatCard({ title, value, percentage, isPositive }: { title: string; value: string; percentage: string; isPositive: boolean }) {
   return (
-    <div className="bg-white border border-[#B3B3B3] p-4 rounded-lg border">
+    <div className="bg-white border border-[#B3B3B3] p-4 rounded-lg ">
       <h3 className="text-sm lg:text-[20px]  mb-2">{title}</h3>
-      <div className="flex items-end justify-between">
+      <div className="flex items-end gap-2">
         <span className="text-3xl font-bold">{value}</span>
         <span
           className={`text-xs px-2 py-1 lg:text-[16px] rounded-full ${isPositive ? "bg-[#6AFF92] text-black" : "bg-[#FF887E] "}`}
@@ -345,33 +345,33 @@ function StatCard({ title, value, percentage, isPositive }: { title: string; val
   )
 }
 
-function InterviewItem({ day, date, time, location, company, logo, subtitle = "" }: { day: string; date: string; time: string; location: string; company: string; logo: string; subtitle?: string }) {
-  return (
-    <div className="flex items-center p-2 border rounded-lg">
-      <div className="flex flex-col items-center justify-center w-12 h-12 bg-gray-50 rounded-lg mr-3">
-        <span className="text-xs text-gray-500">{day}</span>
-        <span className="text-lg font-bold">{date}</span>
-      </div>
-      <div className="flex-1">
-        <div className="flex items-center text-xs text-gray-500 mb-1">
-          <Clock size={12} className="mr-1" />
-          <span>{time}</span>
-        </div>
-        <div className="flex items-center text-xs text-gray-500">
-          <MapPin width={12} height={12} className="mr-1" />
-          <span>{location}</span>
-        </div>
-      </div>
-      <div className="flex items-center">
-        <Image src={logo || "/placeholder.svg"} alt={company} width={24} height={24} className="mr-2" />
-        <div>
-          <div className="font-medium text-sm lg:text-[20px]">{company}</div>
-          {subtitle && <div className="text-xs text-gray-500">{subtitle}</div>}
-        </div>
-      </div>
-    </div>
-  )
-}
+// function InterviewItem({ day, date, time, location, company, logo, subtitle = "" }: { day: string; date: string; time: string; location: string; company: string; logo: string; subtitle?: string }) {
+//   return (
+//     <div className="flex items-center p-2 border rounded-lg">
+//       <div className="flex flex-col items-center justify-center w-12 h-12 bg-gray-50 rounded-lg mr-3">
+//         <span className="text-xs text-gray-500">{day}</span>
+//         <span className="text-lg font-bold">{date}</span>
+//       </div>
+//       <div className="flex-1">
+//         <div className="flex items-center text-xs text-gray-500 mb-1">
+//           <Clock size={12} className="mr-1" />
+//           <span>{time}</span>
+//         </div>
+//         <div className="flex items-center text-xs text-gray-500">
+//           <MapPin width={12} height={12} className="mr-1" />
+//           <span>{location}</span>
+//         </div>
+//       </div>
+//       <div className="flex items-center">
+//         <Image src={logo || "/placeholder.svg"} alt={company} width={24} height={24} className="mr-2" />
+//         <div>
+//           <div className="font-medium text-sm lg:text-[20px]">{company}</div>
+//           {subtitle && <div className="text-xs text-gray-500">{subtitle}</div>}
+//         </div>
+//       </div>
+//     </div>
+//   )
+// }
 
 function ApplicationItem({ logo, position, company, location, salary, status }: { logo: string; position: string; company: string; location: string; salary: string; status: string }) {
   return (
@@ -396,22 +396,22 @@ function ApplicationItem({ logo, position, company, location, salary, status }: 
   )
 }
 
-function MapPin(props: React.SVGProps<SVGSVGElement>) {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      {...props}
-    >
-      <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
-      <circle cx="12" cy="10" r="3" />
-    </svg>
-  )
-}
+// function MapPin(props: React.SVGProps<SVGSVGElement>) {
+//   return (
+//     <svg
+//       xmlns="http://www.w3.org/2000/svg"
+//       width="24"
+//       height="24"
+//       viewBox="0 0 24 24"
+//       fill="none"
+//       stroke="currentColor"
+//       strokeWidth="2"
+//       strokeLinecap="round"
+//       strokeLinejoin="round"
+//       {...props}
+//     >
+//       <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+//       <circle cx="12" cy="10" r="3" />
+//     </svg>
+//   )
+// }

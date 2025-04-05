@@ -1,6 +1,6 @@
 "use client"
 import React from 'react';
-import { MapPin, ExternalLink, Edit2, ChevronDown, Plus, Eye } from 'lucide-react';
+import { MapPin, ExternalLink, Edit2, } from 'lucide-react';
 import Image from 'next/image';
 import Girl from "../../../public/girls.svg"
 import Edit from "../../../public/Edit.svg"
@@ -74,7 +74,7 @@ const ProfilePage = () => {
               To learn more about building a great profile, check out our
               <span className="text-[#4E0684]"> guide to success</span>. Cover all your job fit factors to make
               sure employers can find you. The more complete your profile is, the 
-              more likely you'll get hired.
+              more likely you&apos;ll get hired.
             </p>
           </div>
           </div>

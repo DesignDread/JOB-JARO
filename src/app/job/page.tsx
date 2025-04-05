@@ -9,7 +9,7 @@ export default function JobSearchInterface() {
       {/* Filters Section */}
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6 bg-white rounded-full p-4 max-w-6xl">
         {/* Job Title */}
-        <div className="flex items-center relative">
+        <div className="flex px-4 items-center relative">
           <div className="w-full">
             <label className="block text-xs pt-2 px-1 text-[#1A1A1A]">Job Title</label>
             <div className="bg-white rounded-md px-1 py-2">
@@ -20,7 +20,7 @@ export default function JobSearchInterface() {
         </div>
 
         {/* Location */}
-        <div className="flex items-center relative">
+        <div className="flex px-4 items-center relative">
           <div className="w-full">
             <label className="block text-xs pt-2 px-1 text-[#1A1A1A]">Location</label>
             <div className="bg-white rounded-md px-1 py-2 flex items-center justify-between">
@@ -35,7 +35,7 @@ export default function JobSearchInterface() {
         </div>
 
         {/* Job Type */}
-        <div className="flex items-center relative">
+        <div className="flex px-4 items-center relative">
           <div className="w-full">
             <label className="block text-xs pt-2 px-1 text-[#1A1A1A]">Job Type</label>
             <div className="bg-white rounded-md px-1 py-2 flex items-center justify-between">

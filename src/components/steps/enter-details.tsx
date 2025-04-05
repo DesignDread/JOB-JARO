@@ -17,9 +17,9 @@ interface EnterDetailsProps {
 }
 
 export default function EnterDetails({ onNext, onBack, currentDetailStep, setCurrentDetailStep }: EnterDetailsProps) {
-  const goToStep = (step: DetailStep) => {
-    setCurrentDetailStep(step)
-  }
+  // const goToStep = (step: DetailStep) => {
+  //   setCurrentDetailStep(step)
+  // }
 
   const goToNextDetailStep = () => {
     const steps: DetailStep[] = ["social", "name", "contact", "education", "skills", "highlights", "goals"]
@@ -63,7 +63,7 @@ export default function EnterDetails({ onNext, onBack, currentDetailStep, setCur
           <DetailStepWrapper key="name">
             <h2 className="text-2xl font-semibold text-center">Add your name</h2>
             <p className="text-center  mb-8">
-              You made a great template selection! Now let's add your name to your resume
+              You made a great template selection! Now let&apos;s add your name to your resume
             </p>
 
             <div className="space-y-4">
@@ -83,7 +83,7 @@ export default function EnterDetails({ onNext, onBack, currentDetailStep, setCur
           <DetailStepWrapper key="contact">
             <h2 className="text-2xl font-semibold text-center">Provide Your Contact Information</h2>
             <p className="text-center text-gray-500 mb-8">
-              It's important to let employers know how to contact you. Enter your email address below
+              It&apos;s important to let employers know how to contact you. Enter your email address below
             </p>
 
             <div>
@@ -128,11 +128,11 @@ export default function EnterDetails({ onNext, onBack, currentDetailStep, setCur
             </p>
 
             <div className="space-y-6">
-              <div>
-                <label className="block text-sm font-medium mb-2">Selected Skills:</label>
+              <div className="flex">
                 <div className="flex flex-wrap gap-2">
+                <label className=" text-sm font-medium mt-2 block">Selected&nbsp;Skills:</label>
                   {["UI/UX", "Wireframes", "Shopify", "UI/UX", "Wireframes"].map((skill) => (
-                    <Badge key={skill} className="bg-[#D2E2FD] rounded-full text-black p-4 hover:bg-purple-200">
+                    <Badge key={skill} className="bg-[#D2E2FD] rounded-full text-black p-4 px-5 hover:bg-purple-200">
                       {skill}
                     </Badge>
                   ))}
@@ -284,14 +284,14 @@ function SocialButton({ icon, name }: { icon: React.ReactNode; name: string }) {
   )
 }
 
-function PlusIcon() {
-  return (
-    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M6 2V10" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-      <path d="M2 6H10" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-    </svg>
-  )
-}
+// function PlusIcon() {
+//   return (
+//     <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+//       <path d="M6 2V10" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+//       <path d="M2 6H10" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+//     </svg>
+//   )
+// }
 
 function GoogleIcon() {
   return (

@@ -18,7 +18,7 @@ interface IdealAnswer {
 }
 
 export default function InterviewResultsPage() {
-  const [scrolled, setScrolled] = useState(false)
+  const [, setScrolled] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,6 +26,7 @@ export default function InterviewResultsPage() {
         setScrolled(true)
       }
     }
+    
 
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
@@ -146,19 +147,19 @@ export default function InterviewResultsPage() {
               <div className="space-y-3">
                 <p className=" text-sm  lg:text-[20px]">
                   Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                  industry's standard dummy text ever since the 1500s.
+                  industry&apos;s standard dummy text ever since the 1500s.
                 </p>
                 <p className=" text-sm  lg:text-[20px]">
                   Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                  industry's standard dummy text ever since the 1500s.
+                  industry&apos;s standard dummy text ever since the 1500s.
                 </p>
                 <p className=" text-sm  lg:text-[20px]">
                   Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                  industry's standard dummy text ever since the 1500s.
+                  industry&apos;s standard dummy text ever since the 1500s.
                 </p>
                 <p className=" text-sm  lg:text-[20px]">
                   Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                  industry's standard dummy text ever since the 1500s.
+                  industry&apos;s standard dummy text ever since the 1500s.
                 </p>
               </div>
 
@@ -167,19 +168,19 @@ export default function InterviewResultsPage() {
               <div className="space-y-3">
                 <p className=" text-sm  lg:text-[20px]">
                   Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                  industry's standard dummy text ever since the 1500s.
+                  industry&apos;s standard dummy text ever since the 1500s.
                 </p>
                 <p className=" text-sm  lg:text-[20px]">
                   Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                  industry's standard dummy text ever since the 1500s.
+                  industry&apos;s standard dummy text ever since the 1500s.
                 </p>
                 <p className=" text-sm  lg:text-[20px]">
                   Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                  industry's standard dummy text ever since the 1500s.
+                  industry&apos;s standard dummy text ever since the 1500s.
                 </p>
                 <p className=" text-sm  lg:text-[20px]">
                   Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                  industry's standard dummy text ever since the 1500s.
+                  industry&apos;s standard dummy text ever since the 1500s.
                 </p>
               </div>
             </CardContent>

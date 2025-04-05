@@ -62,9 +62,9 @@ export default function SideNav() {
         />
         <SidebarItem 
           icon={<User size={20} />} 
-          href="/view-interview" 
+          href="/virtual-interview" 
           label="Virtual HR" 
-          active={pathname === "/view-interview"} 
+          active={pathname === "/virtual-interview"} 
         />
         <SidebarItem 
           icon={<Clock size={20} />} 

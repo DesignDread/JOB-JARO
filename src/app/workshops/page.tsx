@@ -12,7 +12,7 @@ import m5 from "../../../public/mentor3.svg";
 import w1 from "../../../public/workshop1.svg";
 import w2 from "../../../public/workshop2.svg";
 import w3 from "../../../public/workshop3.svg";
-function page() {
+function Page() {
   const [search, setSearch] = useState("");
   const mentors = [m1, m2, m3, m4, m5, m1, m2, m3, m4, m5];
   const workshops = [
@@ -92,6 +92,7 @@ function page() {
             <Image
               src={item}
               alt="mentor-image"
+              key={index}
               className="w-20 h-20 object-contain"
             />
           ))}
@@ -106,6 +107,7 @@ function page() {
             return (
               <WorkshopCard
                 img={item.img}
+                key={index}
                 heading={item.heading}
                 speaker={item.speaker}
                 speakerimg={item.speakerimg}
@@ -127,7 +129,14 @@ const WorkshopCard = ({
   speakerimg,
   register,
   join,
-}: any) => {
+}: {
+  img: string;
+  heading: string;
+  speaker: string;
+  speakerimg: string;
+  register: string;
+  join: string;
+}) => {
   return (
     <div className="border-2 rounded-[20px] border-[#B3B3B3] bg-white p-1">
       <div className="w-[95%] mx-auto ">
@@ -166,4 +175,4 @@ const WorkshopCard = ({
     </div>
   );
 };
-export default page;
+export default Page;

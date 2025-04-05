@@ -9,8 +9,8 @@ interface DownloadResumeProps {
 
 export default function DownloadResume({ onBack }: DownloadResumeProps) {
   return (
-    <div className="w-full max-w-md mx-auto flex flex-col items-center justify-center h-full">
-      <h2 className="text-2xl font-semibold text-center text-[#4E0684] lg:text-[56px]">AI Assistant at work</h2>
+    <div className="w-full  mx-auto flex flex-col items-center justify-center h-full">
+      <h2 className=" font-semibold text-center text-[#4E0684] lg:text-[56px]">AI Assistant at work</h2>
       <p className="text-center lg:text-[24px] mt-2 mb-8">
         Your resume is almost ready!
         <br />

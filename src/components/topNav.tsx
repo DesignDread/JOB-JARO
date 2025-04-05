@@ -78,6 +78,7 @@ const Navbar = () => {
                 <span className="ml-2 text-sm text-gray-600 hidden sm:inline">Notifications</span>
                 <Image src={one} alt="1" width={16} height={16} className="ml-2" />
                 <div className="w-8 h-8  overflow-hidden ml-4">
+                    <Link href={"/your-cv"}>
                     <Image 
                         src={Profile}
                         alt="Profile" 
@@ -85,6 +86,8 @@ const Navbar = () => {
                         height={32} 
                         className="object-cover" 
                     />
+                    </Link>
+                    
                 </div>
             </div>
 
