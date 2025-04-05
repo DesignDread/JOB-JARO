@@ -29,7 +29,7 @@ interface TestType {
 }
 
 export default function InterviewsPage() {
-//   const [scrolled, setScrolled] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
