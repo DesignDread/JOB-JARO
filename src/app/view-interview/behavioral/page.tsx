@@ -155,11 +155,11 @@ export default function BehavioralTestPage() {
         {behavioralQuestions.map((question) => (
           <Card
             key={question.id}
-            className={`border ${question.completed ? "border-green-500 bg-green-50" : "border-gray-200"}`}
+            className={`border py-0  ${question.completed ? "border-green-500 bg-green-50" : "border-gray-200"}`}
           >
-            <CardContent className="p-4">
-              <div className="flex items-center mb-2">
-                <div className="flex items-center rounded-full p-1 pr-2">
+            <CardContent className="p-4 gap-8  flex flex-col h-full w-full">
+              <div className="flex items-center  justify-between mb-2">
+                <div className="flex items-center  rounded-full p-1 pr-2">
                   <Clock className="h-4 w-4 mr-1" />
                   <span className="text-xs">{question.time} mins</span>
                 </div>
@@ -205,7 +205,7 @@ export default function BehavioralTestPage() {
                 Complete
               </TabsTrigger>
               </TabsList>
-              <Button variant="outline" className="text-[#4E0684] border-[#4E0684]" disabled={completedCount === 0}>
+              <Button variant="outline" className="text-[#4E0684] rounded-full" disabled={completedCount === 0}>
                 Create Now
               </Button>
             </div>
@@ -218,10 +218,10 @@ export default function BehavioralTestPage() {
 
             {/* Updated In Progress Card to match other card sizes */}
             <Card 
-              className={`border max-w-60 p-4 h-48 relative ${selectedInProgress ? "border-green-500  bg-green-50" : "border-gray-200"}`}
+              className={`border max-w-60 py-0 p-4 h-48 relative ${selectedInProgress ? "border-green-500  bg-green-50" : "border-gray-200"}`}
               onClick={handleInProgressClick}
             >
-              <CardContent className="flex flex-col  items-center justify-between">
+              <CardContent className="flex flex-col py-0 items-center justify-between">
                 <div className="flex absolute left-2 top-2 items-center pb-12">
                   <CheckCircle2 className="h-4 w-4 mr-2" />
                   <span className="text-sm">
@@ -252,8 +252,8 @@ export default function BehavioralTestPage() {
                 {behavioralQuestions
                   .filter((q) => q.completed)
                   .map((question) => (
-                    <Card key={question.id} className="border border-green-500 bg-green-50">
-                      <CardContent className="p-4">
+                    <Card key={question.id} className="border py-0 border-green-500 bg-green-50">
+                      <CardContent className="p-4 flex flex-col gap-8">
                         <div className="flex items-center mb-2">
                           <div className="flex items-center bg-gray-100 rounded-full p-1 pr-2">
                             <Clock className="h-4 w-4 mr-1" />
@@ -286,7 +286,7 @@ export default function BehavioralTestPage() {
       <div className="mb-8">
         <div className="flex justify-between items-center mb-4">
           <h2 className="text-lg font-medium">Polish Your Interview Skills</h2>
-          <Button variant="outline" className="text-[#4E0684] border-[#4E0684]">
+          <Button variant="outline" className="text-[#4E0684] bg-transparent rounded-full border-[#4E0684]">
             Question Library
           </Button>
         </div>
@@ -295,9 +295,9 @@ export default function BehavioralTestPage() {
           {interviewQuestions.map((question) => (
             <Card
               key={question.id}
-              className={`border ${question.completed ? "border-green-500 bg-green-50" : "border-gray-200"}`}
+              className={`border py-0 ${question.completed ? "border-green-500 bg-green-50" : "border-gray-200"}`}
             >
-              <CardContent className="p-4">
+              <CardContent className="p-4 flex flex-col gap-8">
                 <div className="flex items-center mb-2">
                   <div className="flex items-center bg-gray-100 rounded-full p-1 pr-2">
                     <Clock className="h-4 w-4 mr-1" />
@@ -334,9 +334,9 @@ export default function BehavioralTestPage() {
           {realQuestions.map((question) => (
             <Card
               key={question.id}
-              className={`border ${question.completed ? "border-green-500 bg-green-50" : "border-gray-200"}`}
+              className={`border py-0 ${question.completed ? "border-green-500 bg-green-50" : "border-gray-200"}`}
             >
-              <CardContent className="p-4">
+              <CardContent className="p-4 flex flex-col gap-3">
                 <div className="flex items-center mb-2">
                   <div className="flex items-center bg-gray-100 rounded-full p-1 pr-2">
                     <Clock className="h-4 w-4 mr-1" />
@@ -364,7 +364,7 @@ export default function BehavioralTestPage() {
 
       {/* Question Dialog - Updated text sizes */}
       <Dialog open={openDialog} onOpenChange={setOpenDialog}>
-        <DialogContent className="sm:max-w-md">
+        <DialogContent className="sm:max-w-[700px]">
           <DialogHeader>
             <DialogTitle className="text-2xl">Question</DialogTitle>
           </DialogHeader>

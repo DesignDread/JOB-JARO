@@ -2,7 +2,10 @@ import Image from "next/image"
 import Google from "../../public/Google.svg"
 import { Clock, ChevronLeft, ChevronRight, ChevronDown } from "lucide-react"
 import Home1 from "../../public/home1.svg"
-
+import Graph1 from "../../public/Graph1.svg"
+import Graph2 from "../../public/Graph2.svg"
+import Home2 from "../../public/home2.svg"
+import Boy from "../../public/Boy.svg"
 export default function Dashboard() {
   return (
     <div className="flex h-screen bg-[#EBF2FA]">
@@ -29,8 +32,8 @@ export default function Dashboard() {
           {/* Charts and Data - All three boxes in one row */}
           <div className="grid grid-cols-10 gap-6 mb-6">
             {/* First box - wider (5/12 of the width) */}
-            <div className="bg-white p-4 rounded-lg col-span-4">
-              <div className="flex justify-between items-center mb-4">
+            <div className="bg-white border p-4 rounded-lg border-[#B3B3B3] border col-span-4">
+              {/* <div className="flex justify-between items-center mb-4">
                 <h3 className="font-medium">Last Week Applications</h3>
                 <div className="flex items-center gap-4">
                   <div className="flex items-center gap-1">
@@ -42,13 +45,11 @@ export default function Dashboard() {
                     <span className="text-xs text-gray-600">This Month</span>
                   </div>
                 </div>
-              </div>
-              <div className="h-[180px] relative">
+              </div> */}
+              {/* <div className="h-[180px] relative">
                 <svg viewBox="0 0 400 180" className="w-full h-full">
-                  {/* X-axis */}
                   <line x1="40" y1="150" x2="380" y2="150" stroke="#e5e7eb" strokeWidth="1" />
 
-                  {/* Y-axis labels */}
                   <text x="20" y="150" fontSize="10" textAnchor="end" fill="#6b7280">
                     30
                   </text>
@@ -65,7 +66,6 @@ export default function Dashboard() {
                     100
                   </text>
 
-                  {/* X-axis labels */}
                   <text x="40" y="165" fontSize="8" textAnchor="middle" fill="#6b7280">
                     01 July
                   </text>
@@ -85,7 +85,6 @@ export default function Dashboard() {
                     01 July
                   </text>
 
-                  {/* Line chart */}
                   <path
                     d="M40,60 L100,90 L160,50 L220,100 L280,80 L340,90"
                     fill="none"
@@ -93,7 +92,6 @@ export default function Dashboard() {
                     strokeWidth="2"
                   />
 
-                  {/* Data points */}
                   <circle cx="40" cy="60" r="4" fill="#d946ef" />
                   <circle cx="100" cy="90" r="4" fill="#d946ef" />
                   <circle cx="160" cy="50" r="4" fill="#d946ef" />
@@ -101,12 +99,13 @@ export default function Dashboard() {
                   <circle cx="280" cy="80" r="4" fill="#d946ef" />
                   <circle cx="340" cy="90" r="4" fill="#d946ef" />
                 </svg>
-              </div>
+              </div> */}
+              <Image src={Graph1} alt=""></Image>
             </div>
 
             {/* Second box (Upcoming Interviews) - normal width (4/12) */}
-            <div className="bg-white p-4 rounded-lg col-span-3">
-              <h3 className="font-medium mb-4">Upcoming Interviews</h3>
+            <div className="bg-white border border-[#B3B3B3]   p-4 rounded-lg col-span-3">
+              {/* <h3 className="font-medium mb-4">Upcoming Interviews</h3>
               <div className="space-y-3">
                 <InterviewItem
                   day="Fri"
@@ -141,11 +140,12 @@ export default function Dashboard() {
                   logo="/placeholder.svg?height=30&width=30"
                   subtitle="Technical Round"
                 />
-              </div>
+              </div> */}
+              <Image src={Home2} alt=""></Image>
             </div>
             
             {/* Third box (Upcoming Workshops) - normal width (3/12) */}
-            <div className="bg-white p-4 rounded-lg col-span-3">
+            <div className="bg-white border border-[#B3B3B3]  p-4 rounded-lg col-span-3">
               <div className="flex justify-between items-center mb-4">
                 <h3 className="font-medium">Upcoming Workshops</h3>
                 <div className="flex">
@@ -158,7 +158,7 @@ export default function Dashboard() {
                 </div>
               </div>
               <div className="relative">
-                <div className="bg-blue-50 rounded-lg p-3">
+                <div className="border border-[#B3B3B3] rounded-lg p-3">
                   <div className="mb-3">
                     <Image
                 
@@ -169,13 +169,18 @@ export default function Dashboard() {
                       className="rounded-lg w-full h-auto"
                     />
                   </div>
+                  <div className="flex items-center justify-between mb-2">
+                  <div className="flex items-center justify-center gap-2">
+                    <Image src={Boy} alt="" className="h-14 w-14"></Image>
                   <div>
                     <h4 className="font-semibold">Lorem Ipsum</h4>
                     <p className="text-sm lg:text-[20px] text-gray-600">By John</p>
                   </div>
-                  <button className="absolute top-3 right-3 bg-purple-100 text-purple-900 text-xs px-2 py-1 rounded">
+                  </div>
+                  <button className=" top-3 right-3 bg-[#EBF2FA] rounded-full text-purple-900 text-xs px-2 py-1 rounded">
                     Join Now
                   </button>
+                </div>
                 </div>
               </div>
             </div>
@@ -184,9 +189,9 @@ export default function Dashboard() {
           {/* Second row with equal sizing */}
           <div className="grid grid-cols-10 gap-6 mb-6">
             {/* Profile Views */}
-            <div className="bg-white  p-4 rounded-lg col-span-4">
-              <h3 className="font-medium mb-4">Profile Views</h3>
-              <div className="h-[180px] flex items-end justify-between gap-2">
+            <div className="rounded-lg col-span-4">
+              {/* <h3 className="font-medium mb-4">Profile Views</h3> */}
+              {/* <div className="h-[180px] flex items-end justify-between gap-2">
             <div className="flex flex-col gap-6 justify-between text-xs text-gray-500 pb--6">
                 <div>6h</div>
                 <div>4h</div>
@@ -204,12 +209,12 @@ export default function Dashboard() {
                     <div className="text-xs text-gray-600 mt-2">{day}</div>
                   </div>
                 ))}
-              </div>
-              
+              </div> */}
+             <Image src={Graph2} alt="" />
             </div>
 
             {/* Application History */}
-            <div className="bg-white p-4 rounded-lg col-span-3">
+            <div className="bg-white border  border-[#B3B3B3] p-4 rounded-lg col-span-3">
               <div className="flex justify-between items-center mb-4">
                 <h3 className="font-medium">Application History</h3>
                 <button className="flex items-center text-sm lg:text-[20px] text-gray-600">
@@ -245,61 +250,77 @@ export default function Dashboard() {
             </div>
 
             {/* HR Score */}
-            <div className="bg-white p-4 rounded-lg col-span-3">
-              <div className="flex justify-between items-center mb-4">
-                <h3 className="font-medium">Average Virtual HR Score</h3>
-              </div>
-              <div className="flex justify-center gap-16">
-                <div className="flex flex-col items-center">
-                  <div className="relative w-32 h-32">
-                    <svg viewBox="0 0 100 100" className="w-full h-full">
-                      <circle cx="50" cy="50" r="45" fill="none" stroke="#f3e8ff" strokeWidth="10" />
-                      <circle
-                        cx="50"
-                        cy="50"
-                        r="45"
-                        fill="none"
-                        stroke="#d946ef"
-                        strokeWidth="10"
-                        strokeDasharray="283"
-                        strokeDashoffset="113"
-                        transform="rotate(-90 50 50)"
-                      />
-                    </svg>
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <span className="text-2xl font-bold">60%</span>
-                    </div>
-                  </div>
-                  <span className="mt-2 font-medium">Confidence</span>
-                </div>
-                <div className="flex flex-col items-center">
-                  <div className="relative w-32 h-32">
-                    <svg viewBox="0 0 100 100" className="w-full h-full">
-                      <circle cx="50" cy="50" r="45" fill="none" stroke="#f3e8ff" strokeWidth="10" />
-                      <circle
-                        cx="50"
-                        cy="50"
-                        r="45"
-                        fill="none"
-                        stroke="#d946ef"
-                        strokeWidth="10"
-                        strokeDasharray="283"
-                        strokeDashoffset="130"
-                        transform="rotate(-90 50 50)"
-                      />
-                    </svg>
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <span className="text-2xl font-bold">54%</span>
-                    </div>
-                  </div>
-                  <span className="mt-2 font-medium">Knowledge</span>
-                </div>
-              </div>
-              <div className="flex flex-col justify-center mt-4 gap-2">
-                <button className="text-[#4E0684] bg-[#EBF2FA] py-2 px-2 w-1/2 mx-auto rounded-lg text-sm lg:text-[20px] font-medium">View All Insights</button>
-                <button className="text-[#4E0684] bg-[#EBF2FA] py-2 px-2 w-1/2 mx-auto rounded-lg text-sm lg:text-[20px] font-medium">Attempt New Test</button>
-              </div>
-            </div>
+            <div className="bg-white border border-[#B3B3B3] p-4 rounded-lg col-span-3">
+  <div className="flex justify-between items-center mb-4">
+    <h3 className="font-medium">Average Virtual HR Score</h3>
+  </div>
+  <div className="flex justify-center gap-16">
+    <div className="flex flex-col items-center">
+      <div className="relative w-32 h-32">
+        <svg viewBox="0 0 100 100" className="w-full h-full">
+          {/* Define the gradient */}
+          <defs>
+            <linearGradient id="confidence-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stopColor="#60a5fa" /> {/* Blue */}
+              <stop offset="100%" stopColor="#ec4899" /> {/* Pink */}
+            </linearGradient>
+          </defs>
+          <circle cx="50" cy="50" r="45" fill="none" stroke="#F8F8F8" strokeWidth="10" />
+          <circle
+            cx="50"
+            cy="50"
+            r="45"
+            fill="none"
+            stroke="url(#confidence-gradient)"
+            strokeWidth="10"
+            strokeDasharray="283"
+            strokeDashoffset="113"
+            transform="rotate(-90 50 50)"
+             strokeLinecap="round"
+          />
+        </svg>
+        <div className="absolute inset-0 flex items-center justify-center">
+          <span className="text-2xl font-bold">60%</span>
+        </div>
+      </div>
+      <span className="mt-2 font-medium">Confidence</span>
+    </div>
+    <div className="flex flex-col items-center">
+      <div className="relative w-32 h-32">
+        <svg viewBox="0 0 100 100" className="w-full h-full">
+          {/* Define the gradient */}
+          <defs>
+            <linearGradient id="knowledge-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stopColor="#60a5fa" /> {/* Blue */}
+              <stop offset="100%" stopColor="#ec4899" /> {/* Pink */}
+            </linearGradient>
+          </defs>
+          <circle cx="50" cy="50" r="45" fill="none" stroke="#F8F8F8" strokeWidth="10" />
+          <circle
+            cx="50"
+            cy="50"
+            r="45"
+            fill="none"
+            stroke="url(#knowledge-gradient)"
+            strokeWidth="10"
+            strokeDasharray="283"
+            strokeDashoffset="130"
+            transform="rotate(-90 50 50)"
+             strokeLinecap="round"
+          />
+        </svg>
+        <div className="absolute inset-0 flex items-center justify-center">
+          <span className="text-2xl font-bold">54%</span>
+        </div>
+      </div>
+      <span className="mt-2 font-medium">Knowledge</span>
+    </div>
+  </div>
+  <div className="flex flex-col justify-center mt-4 gap-2">
+    <button className="text-[#4E0684] bg-[#EBF2FA] py-2 px-2 w-1/2 mx-auto rounded-lg text-sm lg:text-[14px] font-medium">View All Insights</button>
+    <button className="text-[#4E0684] bg-[#EBF2FA] py-2 px-2 w-1/2 mx-auto rounded-lg text-sm lg:text-[14px] font-medium">Attempt New Test</button>
+  </div>
+</div>
           </div>
         </div>
       </div>
@@ -309,7 +330,7 @@ export default function Dashboard() {
 
 function StatCard({ title, value, percentage, isPositive }: { title: string; value: string; percentage: string; isPositive: boolean }) {
   return (
-    <div className="bg-white p-4 rounded-lg border">
+    <div className="bg-white border border-[#B3B3B3] p-4 rounded-lg border">
       <h3 className="text-sm lg:text-[20px]  mb-2">{title}</h3>
       <div className="flex items-end justify-between">
         <span className="text-3xl font-bold">{value}</span>
@@ -366,7 +387,7 @@ function ApplicationItem({ logo, position, company, location, salary, status }: 
           <span>{salary}</span>
         </div>
         {status === "In Review" ? (
-          <div className="text-blue-600 text-xs mt-1">{status}</div>
+          <div className="text-blue-600 bg-[#EBF2FA] text-xs mt-1">{status}</div>
         ) : (
           <button className="bg-red-500 text-white text-xs px-3 py-1 rounded mt-1">{status}</button>
         )}

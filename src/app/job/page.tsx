@@ -1,6 +1,7 @@
 import { Search, ChevronDown, MoreVertical, Clock, MapPin } from "lucide-react"
 import Image from "next/image"
 import Google from "../../../public/Google.svg"
+import Slant from "../../../public/SlantArrow.svg"
 
 export default function JobSearchInterface() {
   return (
@@ -30,7 +31,7 @@ export default function JobSearchInterface() {
               <ChevronDown size={16} className="text-gray-400" />
             </div>
           </div>
-          <div className="h-10 w-px bg-gray-200 absolute right-0"></div>
+          <div className="h-10 w-px  bg-gray-200 absolute -right-2"></div>
         </div>
 
         {/* Job Type */}
@@ -61,7 +62,7 @@ export default function JobSearchInterface() {
               <ChevronDown size={16} className="text-gray-400" />
             </div>
           </div>
-          <div className="h-10 w-px bg-gray-200 absolute right-0"></div>
+          {/* <div className="h-10 w-px bg-gray-200 absolute right-0"></div> */}
         </div>
 
         {/* Salary range */}
@@ -73,7 +74,7 @@ export default function JobSearchInterface() {
               <ChevronDown size={16} className="text-gray-400" />
             </div>
           </div>
-          <div className="h-10 w-px bg-gray-200 absolute right-0"></div>
+          {/* <div className="h-10 w-px px- bg-gray-200 absolute right-0"></div> */}
         </div>
 
         {/* Listed within */}
@@ -85,7 +86,7 @@ export default function JobSearchInterface() {
               <ChevronDown size={16} className="text-gray-400" />
             </div>
           </div>
-          <div className="h-10 w-px bg-gray-200 absolute right-0"></div>
+          {/* <div className="h-10 w-px bg-gray-200 absolute right-0"></div> */}
         </div>
 
         {/* Experience level */}
@@ -97,7 +98,7 @@ export default function JobSearchInterface() {
               <ChevronDown size={16} className="text-gray-400" />
             </div>
           </div>
-          <div className="h-10 w-px bg-gray-200 absolute right-0"></div>
+          {/* <div className="h-10 w-px bg-gray-200 absolute right-0"></div> */}
         </div>
 
         {/* Industry */}
@@ -116,11 +117,11 @@ export default function JobSearchInterface() {
       </div>
 
       {/* Jobs Section Header */}
-      <div className="flex justify-between items-center mb-6">
+      <div className="flex justify-between max-w-6xl items-center mb-6">
         <h2 className="text-lg font-semibold">Top Jobs For You</h2>
-        <button className="bg-white text-[#4E0684] rounded-full px-4 py-2 flex items-center gap-2 font-medium text-sm">
+        <button className=" text-[#4E0684] rounded-full px-4 py-2 flex items-center gap-2 font-medium text-sm">
           <div className="w-5 h-5 rounded-full bg-[#4E0684] flex items-center justify-center text-white text-xs">
-            6
+           <Image src={Slant} alt=""></Image>
           </div>
           Explore More Jobs
         </button>

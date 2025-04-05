@@ -88,8 +88,8 @@ export default function VirtualInterviewPage() {
             <div className="w-full h-full flex items-center justify-center text-white">Camera Off</div>
           )}
         </div>
-        <div className="absolute mt-3 right-2 bg-gradient-to-b from-[#5417A3] to-[#410F80] text-white text-xs w-[290px] px-2 py-1 rounded-full">
-        <div className="w-1 h-1 bg-white rounded-full"></div>
+        <div className="absolute mt-3 right-2 bg-gradient-to-b gap-4 items-center from-[#5417A3] flex to-[#410F80] text-white text-xs w-[290px] px-2 py-1 rounded-full">
+        <div className="w-2 h-2 bg-white rounded-full "></div>
         Listening
         </div>
       </div>
@@ -102,20 +102,19 @@ export default function VirtualInterviewPage() {
       </div>
           
       {/* Controls */}
-      <div className="w-full max-w-7xl mb-8">
-        <div className="flex justify-between items-center mb-8">
-          <div className="text-sm">
+      <div className="w-full flex relative mb-8">
+      <div className="text-sm absolute pt-2">
             <p className="lg:text-[22px]">Interview Duration</p>
             <p className="text-xl font-semibold">{formatTime(timer)}</p>
           </div>
+        <div className="flex flex-col gap-4 w-full justify-center items-center mb-8">
+          
 
-          <Button onClick={completeInterview} className="bg-white text-purple-700 hover:bg-gray-100 rounded-full px-6">
+          <Button onClick={completeInterview} className="bg-white mx-auto text-purple-700 hover:bg-gray-100 rounded-full px-6">
             Complete Interview
           </Button>
 
           <div className="w-[100px]">{/* Spacer for layout balance */}</div>
-        </div>
-
         <div className="flex justify-center space-x-4">
           <Button variant="outline" size="icon" className="rounded-full bg-white w-12 h-12" onClick={toggleMicrophone}>
             {isRecording ? <Mic className="h-5 w-5 text-[#4E0684]" /> : <MicOff className="h-5 w-5" />}
@@ -125,6 +124,8 @@ export default function VirtualInterviewPage() {
             {isCameraOn ? <Video className="h-5 w-5 text-[#4E0684]" /> : <VideoOff className="h-5 w-5" />}
           </Button>
         </div>
+        </div>
+
       </div>
     </div>
   )

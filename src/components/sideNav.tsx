@@ -68,9 +68,9 @@ export default function SideNav() {
         />
         <SidebarItem 
           icon={<Clock size={20} />} 
-          href="/interviews" 
+          href="/interview" 
           label="Upcoming Interviews" 
-          active={pathname === "/interviews"} 
+          active={pathname === "/interview"} 
         />
         <SidebarItem 
           icon={<Calculator size={20} />} 

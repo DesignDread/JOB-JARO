@@ -54,7 +54,7 @@ function TestCard({ title, description, imageSrc, buttonText, buttonLink }: Test
         <div className="flex flex-1 flex-col justify-between p-6">
           <div>
             <h2 className="mb-2 text-xl lg:text-[38px] font-medium text-gray-900">{title}</h2>
-            <p className="text-sm lg:text-[24px]">{description}</p>
+            <p className="text-sm lg:text-[20px]">{description}</p>
           </div>
           <div className="mt-4">
             <Link

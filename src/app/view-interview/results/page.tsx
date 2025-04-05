@@ -117,10 +117,10 @@ export default function InterviewResultsPage() {
         <Card className="mb-8">
         <div className="flex justify-between px-4 items-center mb-4">
           <div>
-            <h1 className="text-xl font-bold">AI Video Score</h1>
-            <p className="text-sm  ">How to Master Networking and Land Your Dream Job</p>
+            <h1 className="text-xl font-bold lg:text-[28px]">AI Video Score</h1>
+            <p className="text-sm lg:text-[24px] ">How to Master Networking and Land Your Dream Job</p>
           </div>
-          <Button className="bg-purple-700 hover:bg-purple-800">Download Report</Button>
+          <Button className="bg-[#4E0684] hover:bg-[#4E0684]/50">Download Report</Button>
         </div>
           <CardContent className="p-4">
             <div className="flex flex-wrap justify-between gap-2">

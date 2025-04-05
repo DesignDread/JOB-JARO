@@ -9,6 +9,8 @@ import FilledBag from "../../../public/FilledBag.svg"
 import OutlineBag from "../../../public/outlineBag.svg"
 import Calander from "../../../public/Calander.svg"
 import {Input} from "@/components/ui/input"
+import Video from "../../../public/video.svg"
+import Note from "../../../public/note.svg"
 
 const ProfilePage = () => {
   return (
@@ -27,13 +29,14 @@ const ProfilePage = () => {
           </div>
         </div>
         <div className="flex gap-2">
-          <button className="border border-[#4E0684] rounded px-3 py-1 text-[#4E0684] text-sm flex items-center gap-1">
-            <Plus size={14} />
+          <button className=" rounded px-3 py-1 text-[#4E0684] text-sm flex items-center gap-1">
+        
+            <Image src={Video} alt=''></Image>
             <span>Add Video Resume</span>
           </button>
-          <button className="bg-purple-700 rounded px-3 py-1 text-white text-sm flex items-center gap-1">
-            <Eye size={14} />
-            <span>View Resume</span>
+          <button className=" rounded px-3 text-[#4E0684] py-1  text-sm flex items-center gap-1">
+          <Image src={Note} alt=''></Image>
+          <span className='text-[#4E0684]'>View Resume</span>
           </button>
         </div>
       </div>
@@ -62,7 +65,7 @@ const ProfilePage = () => {
             <div className="relative">
                 <span className="text-3xl lg:text-[115px] font-medium">10%</span>
               
-              <p className="text-xs text-center lg:text-[20px] mt-1">of your profile is complete</p>
+              <p className="text-xs text-center lg:text-[16px] mt-1">of your profile is complete</p>
             </div>
           </div>
           <div className="flex-1">
@@ -79,7 +82,7 @@ const ProfilePage = () => {
       </div>
 
       {/* Skills Section */}
-      <div className="bg-white p-8 rounded-lg mb-4 relative">
+      <div className="bg-white p-8 border border-[#B3B3B3] rounded-lg mb-4 relative">
         <div className="flex justify-between">
           <h2 className="font-medium lg:text-[24px]">Skills</h2>
           {/*  <Image src={Edit} alt=''></Image>
@@ -128,7 +131,7 @@ const ProfilePage = () => {
         
         {/* Left column */}
         <div className="flex-1 flex flex-col gap-4">
-        <div className="bg-white shadow-md p-8 lg:text-[24px] rounded-lg relative">
+        <div className="bg-white  border border-[#B3B3B3] shadow-md p-8 lg:text-[24px] rounded-lg relative">
             <div className="flex justify-between">
               <h2 className="font-medium pt-2">Currently working with...</h2>
               <Image src={Edit} className='' alt=''></Image>
@@ -146,7 +149,7 @@ const ProfilePage = () => {
             </div>
           </div>
           {/* Certificates Section */}
-          <div className="bg-white shadow-md p-8 lg:text-[24px] rounded-lg relative">
+          <div className="bg-white  border border-[#B3B3B3] shadow-md p-8 lg:text-[24px] rounded-lg relative">
             <div className="flex justify-between">
               <h2 className="font-medium">Certificates</h2>
                <Image src={Edit} alt=''></Image>
@@ -163,7 +166,7 @@ const ProfilePage = () => {
           </div>
 
           {/* Portfolio Section */}
-          <div className="bg-white p-4 rounded-lg relative">
+          <div className="bg-white  border border-[#B3B3B3] p-4 rounded-lg relative">
             <div className="flex justify-between">
               <h2 className="font-medium">Portfolio</h2>
                <Image src={Edit} alt=''></Image>
@@ -173,8 +176,8 @@ const ProfilePage = () => {
               {Array(2).fill(null).map((_, i) => (
                 <div key={i} className="border rounded-lg bg-[#EBF2FA] p-3 flex items-center justify-between">
                   <div className="flex items-center gap-2">
-                    <div className='bg-white p-2 rounded-full'>
-                    <Image src={FilledBag} alt=""></Image>
+                    <div className='bg-white p-4 rounded-full'>
+                    <Image src={FilledBag} alt="" className='h-8 w-8' ></Image>
                     </div>
                     <span className="text-sm lg:text-[24px]">Website {i + 1}</span>
                   </div>
@@ -193,7 +196,7 @@ const ProfilePage = () => {
         {/* Right column */}
         <div className="flex-[2] flex flex-col gap-4">
           {/* Work History Section */}
-          <div className="bg-white p-8 rounded-lg relative">
+          <div className="bg-white  border border-[#B3B3B3] p-8 rounded-lg relative">
             <div className="flex justify-between">
               <h2 className="font-medium lg:text-[24px]">Work History</h2>
                <Image src={Edit} alt=''></Image>
@@ -220,7 +223,7 @@ const ProfilePage = () => {
           </div>
 
           {/* Education Section */}
-          <div className="bg-white p-4 rounded-lg relative">
+          <div className="bg-white  border border-[#B3B3B3] p-4 rounded-lg relative">
             <div className="flex justify-between">
               <h2 className="font-medium lg:text-[24px]">Education</h2>
                <Image src={Edit} alt=''></Image>
@@ -267,21 +270,21 @@ const ProfilePage = () => {
             <div className="flex flex-col gap-4">
               <div>
                 <label className="text-sm block mb-1 lg:text-[20px] ">Availability</label>
-                <select className="w-full border rounded-md p-2 text-gray-400">
+                <select className="w-full border bg-white rounded-md p-2 text-gray-400">
                   <option>Not Specified</option>
                 </select>
               </div>
               
               <div>
                 <label className="text-sm block mb-1 lg:text-[20px]">Preferred Work Type</label>
-                <select className="w-full border rounded-md p-2 text-gray-400">
+                <select className="w-full border bg-white rounded-md p-2 text-gray-400">
                   <option>Not Specified</option>
                 </select>
               </div>
               
               <div>
                 <label className="text-sm block mb-1 lg:text-[20px]">Preferred Work Mode</label>
-                <select className="w-full border rounded-md p-2 text-gray-400">
+                <select className="w-full border bg-white rounded-md p-2 text-gray-400">
                   <option>Not Specified</option>
                 </select>
               </div>
@@ -294,7 +297,7 @@ const ProfilePage = () => {
                     placeholder="+ Location" 
                     className="w-full border rounded-md p-2 pl-8" 
                   />
-                  <MapPin size={16} className="absolute left-2 top-3 text-gray-400" />
+                  <MapPin size={20} fill='#4E0684' className="absolute left-3 top-2 text-white" />
                 </div>
                 <button className="bg-[#4285F4] rounded-full lg:text-[20px] text-white text-xs  py-1 px-3 mt-2">
                   + New Location
@@ -310,8 +313,8 @@ const ProfilePage = () => {
                     placeholder="+ Location" 
                     className="w-full border rounded-md p-2 pl-8" 
                   />
-                  <MapPin size={16} className="absolute left-2 top-3 text-gray-400" />
-                </div>
+                  <MapPin size={20} fill='#4E0684' className="absolute left-3 top-2 text-white" />
+                  </div>
                 <div className="flex justify-between items-center mt-2">
                   <button className="bg-[#4285F4] rounded-full lg:text-[20px] text-white text-xs  py-1 px-3">
                     + New Location
@@ -322,7 +325,7 @@ const ProfilePage = () => {
               
               <div>
                 <label className="text-sm block mb-1 lg:text-[20px]">Salary Expectations</label>
-                <select className="w-full border rounded-md p-2 text-gray-400">
+                <select className="w-full border bg-white rounded-md p-2 text-gray-400">
                   <option>Not Specified</option>
                 </select>
               </div>
@@ -341,7 +344,7 @@ const ProfilePage = () => {
               
               <div>
                 <label className="text-sm block mb-1 lg:text-[20px]">Approachability</label>
-                <select className="w-full border rounded-md p-2 text-gray-400">
+                <select className="w-full border bg-white rounded-md p-2 text-gray-400">
                   <option>Online</option>
                 </select>
               </div>

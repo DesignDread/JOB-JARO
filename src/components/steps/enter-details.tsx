@@ -62,18 +62,18 @@ export default function EnterDetails({ onNext, onBack, currentDetailStep, setCur
         {currentDetailStep === "name" && (
           <DetailStepWrapper key="name">
             <h2 className="text-2xl font-semibold text-center">Add your name</h2>
-            <p className="text-center text-gray-500 mb-8">
+            <p className="text-center  mb-8">
               You made a great template selection! Now let's add your name to your resume
             </p>
 
             <div className="space-y-4">
               <div>
-                <label className="block text-sm font-medium mb-1">Enter Your First Name</label>
-                <Input placeholder="Enter Your First Name" className="bg-[#EBF2FA] py-6 rounded-none border-none" />
+                <label className="block text-sm  font-medium mb-1">Enter Your First Name</label>
+                <Input placeholder="Enter Your First Name" className="bg-[#EBF2FA] rounded py-6  border-none" />
               </div>
               <div>
-                <label className="block text-sm font-medium mb-1">Enter Your Last Name</label>
-                <Input placeholder="Enter Your Last Name" className="bg-[#EBF2FA] py-6 rounded-none border-none" />
+                <label className="block text-sm  font-medium mb-1">Enter Your Last Name</label>
+                <Input placeholder="Enter Your Last Name" className="bg-[#EBF2FA] py-6 rounded border-none" />
               </div>
             </div>
           </DetailStepWrapper>
@@ -87,8 +87,8 @@ export default function EnterDetails({ onNext, onBack, currentDetailStep, setCur
             </p>
 
             <div>
-              <label className="block text-sm font-medium mb-1">Enter Your Email Address</label>
-              <Input placeholder="Enter your email address" type="email" />
+              <label className="block text-sm  font-medium mb-1">Enter Your Email Address</label>
+              <Input placeholder="Enter your email address" type="email" className="bg-[#EBF2FA] rounded py-6 border-none shadow-none " />
             </div>
           </DetailStepWrapper>
         )}
@@ -103,17 +103,17 @@ export default function EnterDetails({ onNext, onBack, currentDetailStep, setCur
             <div className="space-y-4">
               <div>
                 <label className="block text-sm font-medium mb-1">Name of the educational institution</label>
-                <Input placeholder="University name" />
+                <Input placeholder="University name" className="bg-[#EBF2FA] rounded py-6 border-none shadow-none" />
               </div>
               <div>
                 <label className="block text-sm font-medium mb-1">Degree</label>
-                <Input placeholder="Bachelor's, Master's, etc." />
+                <Input placeholder="Bachelor's, Master's, etc." className="bg-[#EBF2FA] rounded py-6 border-none shadow-none" />
               </div>
               <div>
                 <label className="block text-sm font-medium mb-1">Start & End Date</label>
                 <div className="grid grid-cols-2 gap-4">
-                  <Input placeholder="MM/YYYY" />
-                  <Input placeholder="MM/YYYY" />
+                  <Input placeholder="MM/YYYY" className="bg-[#EBF2FA] rounded py-6 border-none shadow-none" />
+                  <Input placeholder="MM/YYYY" className="bg-[#EBF2FA] rounded py-6 border-none shadow-none" />
                 </div>
               </div>
             </div>
@@ -132,7 +132,7 @@ export default function EnterDetails({ onNext, onBack, currentDetailStep, setCur
                 <label className="block text-sm font-medium mb-2">Selected Skills:</label>
                 <div className="flex flex-wrap gap-2">
                   {["UI/UX", "Wireframes", "Shopify", "UI/UX", "Wireframes"].map((skill) => (
-                    <Badge key={skill} className="bg-purple-100 text-[#4E0684] hover:bg-purple-200">
+                    <Badge key={skill} className="bg-[#D2E2FD] rounded-full text-black p-4 hover:bg-purple-200">
                       {skill}
                     </Badge>
                   ))}
@@ -141,14 +141,14 @@ export default function EnterDetails({ onNext, onBack, currentDetailStep, setCur
 
               <div>
                 <label className="block text-sm font-medium mb-1">Skills</label>
-                <Input placeholder="Add more skills" />
+                <Input placeholder="Add more skills" className="bg-[#D2E2FD] py-12" />
               </div>
 
               <div>
                 <label className="block text-sm font-medium mb-2">Suggested Skills:</label>
                 <div className="flex flex-wrap gap-2">
                   {["UI/UX", "Wireframes", "Shopify", "UI/UX", "Wireframes"].map((skill) => (
-                    <Badge key={skill} variant="outline" className="bg-purple-50 hover:bg-purple-100">
+                    <Badge key={skill} variant="outline" className="bg-[#D2E2FD] rounded-full p-4 text-gray-400 hover:bg-purple-100">
                       {skill}
                     </Badge>
                   ))}
@@ -168,10 +168,10 @@ export default function EnterDetails({ onNext, onBack, currentDetailStep, setCur
             <div className="space-y-6">
               <div className="flex justify-center">
                 <div className="bg-white rounded-full p-1 flex">
-                  <Button variant="default" className="rounded-l-full rounded-r-none bg-[#4E0684] hover:bg-[#4E0684]">
+                  <Button variant="default" className="rounded-full rounded-r-none bg-[#4E0684] hover:bg-[#4E0684]">
                     Voice Input
                   </Button>
-                  <Button variant="outline" className="rounded-r-full rounded-l-none">
+                  <Button variant="outline" className="rounded-full rounded-l-none">
                     Text Input
                   </Button>
                 </div>
@@ -229,7 +229,7 @@ export default function EnterDetails({ onNext, onBack, currentDetailStep, setCur
 
               <div>
                 <label className="block text-sm font-medium mb-1">Write your text here</label>
-                <Textarea placeholder="Write your text here" className="h-32" />
+                <Textarea placeholder="Write your text here" className="h-32 bg-[#EBF2FA]" />
               </div>
             </div>
           </DetailStepWrapper>
@@ -237,11 +237,11 @@ export default function EnterDetails({ onNext, onBack, currentDetailStep, setCur
       </AnimatePresence>
 
       <div className="mt-8 flex justify-between">
-        <Button onClick={goToPrevDetailStep} variant="outline" className="px-8">
-          {currentDetailStep === "social" ? "Previous" : "Previous"}
+        <Button onClick={goToPrevDetailStep} variant="outline" className="px-8 rounded-full border-[#571BAD] text-[#571BAD] ">
+          {currentDetailStep === "social" ? "Previous" : "Back"}
         </Button>
 
-        <Button onClick={goToNextDetailStep} className="bg-[#4E0684] hover:bg-[#4E0684] text-white px-8">
+        <Button onClick={goToNextDetailStep} className="bg-[#EBF2FA] hover:bg-[#EBF2FA]/50 text-[#4E0684] rounded-full px-8">
           {currentDetailStep === "goals"
             ? "Create My Resume"
             : currentDetailStep === "highlights"
@@ -269,13 +269,16 @@ function DetailStepWrapper({ children }: { children: React.ReactNode }) {
 
 function SocialButton({ icon, name }: { icon: React.ReactNode; name: string }) {
   return (
-    <div className="flex items-center justify-between p-4  rounded-lg hover:bg-gray-50 cursor-pointer">
+    <div className="flex items-center justify-between p-4 px-6  rounded-lg hover:bg-gray-50 cursor-pointer">
       <div className="flex items-center">
+        <div className="bg-white rounded-full p-2 mr-4">
         {icon}
+        </div>
+        
         <span className="ml-3">{name}</span>
       </div>
-      <div className="w-6 h-6 rounded-full bg-[#4E0684] flex items-center justify-center text-white">
-        <PlusIcon />
+      <div className="w-6 h-6 rounded-full bg-[#4E0684] flex pb-1 items-center justify-center text-white">
+     &gt;
       </div>
     </div>
   )
