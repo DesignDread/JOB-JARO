@@ -16,10 +16,10 @@ export default function Dashboard() {
 
         {/* Dashboard Content */}
         <div className="p-6">
-          <h2 className="text-xl font-semibold mb-4">Overview</h2>
+          <h2 className="text-xl font-semibold mb-4 lg:text-[24px]">Overview</h2>
 
           {/* Stats Cards */}
-          <div className="grid grid-cols-4 gap-4 mb-6">
+          <div className="grid grid-cols-5 gap-4 mb-6">
             <StatCard title="Total Applications" value="53" percentage="65%" isPositive={true} />
             <StatCard title="Application Rejected" value="22" percentage="45%" isPositive={false} />
             <StatCard title="Profile Visits" value="12" percentage="85%" isPositive={true} />
@@ -171,7 +171,7 @@ export default function Dashboard() {
                   </div>
                   <div>
                     <h4 className="font-semibold">Lorem Ipsum</h4>
-                    <p className="text-sm text-gray-600">By John</p>
+                    <p className="text-sm lg:text-[20px] text-gray-600">By John</p>
                   </div>
                   <button className="absolute top-3 right-3 bg-purple-100 text-purple-900 text-xs px-2 py-1 rounded">
                     Join Now
@@ -212,7 +212,7 @@ export default function Dashboard() {
             <div className="bg-white p-4 rounded-lg col-span-3">
               <div className="flex justify-between items-center mb-4">
                 <h3 className="font-medium">Application History</h3>
-                <button className="flex items-center text-sm text-gray-600">
+                <button className="flex items-center text-sm lg:text-[20px] text-gray-600">
                   Today <ChevronDown size={16} />
                 </button>
               </div>
@@ -296,8 +296,8 @@ export default function Dashboard() {
                 </div>
               </div>
               <div className="flex flex-col justify-center mt-4 gap-2">
-                <button className="text-[#4E0684] bg-[#EBF2FA] py-2 px-2 w-1/2 mx-auto rounded-lg text-sm font-medium">View All Insights</button>
-                <button className="text-[#4E0684] bg-[#EBF2FA] py-2 px-2 w-1/2 mx-auto rounded-lg text-sm font-medium">Attempt New Test</button>
+                <button className="text-[#4E0684] bg-[#EBF2FA] py-2 px-2 w-1/2 mx-auto rounded-lg text-sm lg:text-[20px] font-medium">View All Insights</button>
+                <button className="text-[#4E0684] bg-[#EBF2FA] py-2 px-2 w-1/2 mx-auto rounded-lg text-sm lg:text-[20px] font-medium">Attempt New Test</button>
               </div>
             </div>
           </div>
@@ -309,12 +309,12 @@ export default function Dashboard() {
 
 function StatCard({ title, value, percentage, isPositive }: { title: string; value: string; percentage: string; isPositive: boolean }) {
   return (
-    <div className="bg-white p-4 rounded-lg">
-      <h3 className="text-sm text-gray-600 mb-2">{title}</h3>
+    <div className="bg-white p-4 rounded-lg border">
+      <h3 className="text-sm lg:text-[20px]  mb-2">{title}</h3>
       <div className="flex items-end justify-between">
         <span className="text-3xl font-bold">{value}</span>
         <span
-          className={`text-xs px-2 py-1 rounded ${isPositive ? "bg-green-100 text-green-600" : "bg-red-100 text-red-600"}`}
+          className={`text-xs px-2 py-1 lg:text-[16px] rounded-full ${isPositive ? "bg-[#6AFF92] text-black" : "bg-[#FF887E] "}`}
         >
           {percentage}
           {isPositive ? "+" : "-"}
@@ -344,7 +344,7 @@ function InterviewItem({ day, date, time, location, company, logo, subtitle = ""
       <div className="flex items-center">
         <Image src={logo || "/placeholder.svg"} alt={company} width={24} height={24} className="mr-2" />
         <div>
-          <div className="font-medium text-sm">{company}</div>
+          <div className="font-medium text-sm lg:text-[20px]">{company}</div>
           {subtitle && <div className="text-xs text-gray-500">{subtitle}</div>}
         </div>
       </div>

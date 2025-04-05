@@ -18,7 +18,7 @@ interface IdealAnswer {
 }
 
 export default function InterviewResultsPage() {
-//   const [scrolled, setScrolled] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
