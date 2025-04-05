@@ -4,10 +4,10 @@ import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 
 interface DownloadResumeProps {
-  onPrevious: () => void
+  onBack: () => void
 }
 
-export default function DownloadResume({ onPrevious }: DownloadResumeProps) {
+export default function DownloadResume({ onBack }: DownloadResumeProps) {
   return (
     <div className="w-full max-w-md mx-auto flex flex-col items-center justify-center h-full">
       <h2 className="text-2xl font-semibold text-center text-[#4E0684]">AI Assistant at work</h2>
@@ -47,7 +47,7 @@ export default function DownloadResume({ onPrevious }: DownloadResumeProps) {
       </motion.div>
 
       <div className="flex space-x-4">
-        <Button onClick={onPrevious} variant="outline" className="px-8">
+        <Button onClick={onBack} variant="outline" className="px-8">
           Previous
         </Button>
 

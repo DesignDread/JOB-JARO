@@ -11,12 +11,12 @@ import { Linkedin } from "lucide-react"
 
 interface EnterDetailsProps {
   onNext: () => void
-  onPrevious: () => void
+  onBack: () => void
   currentDetailStep: DetailStep
   setCurrentDetailStep: (step: DetailStep) => void
 }
 
-export default function EnterDetails({ onNext, onPrevious, currentDetailStep, setCurrentDetailStep }: EnterDetailsProps) {
+export default function EnterDetails({ onNext, onBack, currentDetailStep, setCurrentDetailStep }: EnterDetailsProps) {
   const goToStep = (step: DetailStep) => {
     setCurrentDetailStep(step)
   }
@@ -39,7 +39,7 @@ export default function EnterDetails({ onNext, onPrevious, currentDetailStep, se
     if (currentIndex > 0) {
       setCurrentDetailStep(steps[currentIndex - 1])
     } else {
-      onPrevious()
+      onBack()
     }
   }
 
